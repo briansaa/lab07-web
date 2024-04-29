@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSZaE0pFEM0VXKzvRRzjX/dUld3+Kgs5vU5S+EBrYWRt4QpNM1j5vjW7z8beBu2K" crossorigin="anonymous">
+  <style>
+    /* Estilos personalizados para los carruseles */
+    .carousel-caption {
+      background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+      color: #333; /* Color del texto */
+      border-radius: 10px; /* Bordes redondeados */
+      padding: 10px; /* Espaciado interno */
+      bottom: 20px; /* Distancia desde abajo */
+      left: 20px; /* Distancia desde la izquierda */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+      border-radius: 50%; /* Botones redondeados */
+      width: 40px; /* Ancho de los botones */
+      height: 40px; /* Altura de los botones */
+      line-height: 40px; /* Centrar el ícono verticalmente */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      color: #fff; /* Color del ícono */
+      font-size: 1.5rem; /* Tamaño del ícono */
+    }
+
+    .carousel-item img {
+      border-radius: 10px; /* Bordes redondeados para las imágenes */
+    }
+    /* Estilos para el carrusel */
+#carouselExampleControls {
+  margin-top: 50px; /* Espacio superior */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #fff; /* Color del texto */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  bottom: 20px; /* Distancia desde abajo */
+  left: 50%; /* Alinear al centro horizontal */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+  border-radius: 50%; /* Botones redondeados */
+  width: 50px; /* Ancho de los botones */
+  height: 50px; /* Altura de los botones */
+  line-height: 50px; /* Centrar el ícono verticalmente */
+  font-size: 1.5rem; /* Tamaño del ícono */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: #000; /* Color del ícono */
+}
+
+/* Estilos para la sección de testimonios */
+.bg-light.py-5 {
+  padding-top: 100px; /* Espacio superior */
+  padding-bottom: 100px; /* Espacio inferior */
+}
+
+.blockquote {
+  background-color: #f8f9fa; /* Fondo del bloque de cita */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 30px; /* Espaciado interno */
+}
+
+.blockquote p {
+  font-size: 1.25rem; /* Tamaño de texto */
+}
+
+.blockquote-footer {
+  margin-top: 20px; /* Espacio superior */
+  font-style: italic; /* Estilo cursiva */
+}
+
+/* Estilos para el formulario de contacto */
+.py-5 {
+  padding-top: 100px; /* Espacio superior */
+  padding-bottom: 100px; /* Espacio inferior */
+}
+
+.form-label {
+  font-weight: bold; /* Negrita para etiquetas */
+}
+
+.form-control {
+  border-radius: 10px; /* Bordes redondeados para campos de entrada */
+}
+
+.form-check-input {
+  margin-top: 5px; /* Espacio superior */
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ventas
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Caja</a></li>
+            <li><a class="dropdown-item" href="#">Cliente</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Compras
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Proveedor</a></li>
+            <li><a class="dropdown-item" href="#">Orden Compra</a></li>
+            <li><a class="dropdown-item" href="#">Almacén</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Control Inventario
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/productos">Producto</a></li>
+            <li><a class="dropdown-item" href="/categorias">Categoría</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+
+<!-- Pie de página -->
+<footer class="bg-dark text-light py-4">
+  <div class="container text-center">
+    <p>&copy; 2024 Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!-- Scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-iZVmI9F8MQCy8TfGkuAg2tW9T16Sj6G+n6DHUYB5k5Dy41Eol7H/1oXsWJ/xXKV+" crossorigin="anonymous"></script>
+</body>
+</html>
